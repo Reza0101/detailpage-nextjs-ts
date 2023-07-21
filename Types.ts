@@ -1,5 +1,5 @@
 export type dummyEventsType = {
-    id: string;
+    id: number;
     title: string;
     description: string;
     location: string;

@@ -3,17 +3,17 @@ import { dummyEventsType } from "./Types";
 
 const DUMMY_EVENTS: dummyEventsType[] = [
     {
-        id: "e1",
+        id: 1,
         title: "Programming for everyone",
         description:
             "Everyone can learn to code! Yes, everyone! In this live event, we are going to go through all the key basics and get you started with programming as well.",
         location: "Somestreet 25, 12345 San Somewhereo",
         date: "2021-05-12",
         image: "images/coding-event.jpg",
-        isFeatured: false,
+        isFeatured: true,
     },
     {
-        id: "e2",
+        id: 2,
         title: "Networking for introverts",
         description:
             "We know: Networking is no fun if you are an introvert person. That's why we came up with this event - it'll be so much easier. Promised!",
@@ -23,7 +23,7 @@ const DUMMY_EVENTS: dummyEventsType[] = [
         isFeatured: true,
     },
     {
-        id: "e3",
+        id: 3,
         title: "Networking for extroverts",
         description:
             "You probably need no help with networking in general. But focusing your energy correctly - that is something where most people can improve.",
@@ -56,6 +56,6 @@ export function getFilteredEvents(dateFilter: {year: number, month: number}) {
     return filteredEvents;
 }
 
-export function getEventById(id: string) {
+export function getEventById(id: number) {
     return DUMMY_EVENTS.find((event: dummyEventsType) => event.id === id);
 }
