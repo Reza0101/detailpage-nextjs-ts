@@ -8,6 +8,7 @@ const HomePage = () => {
 
   return (
     <div>
+      
         <EventList items={featureEvents} /> 
     </div>
   );
