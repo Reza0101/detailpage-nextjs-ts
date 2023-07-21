@@ -1,6 +1,9 @@
 import { dummyEventsType } from "@/Types";
 import classes from "./event-item.module.css";
 import Button from "./../../components/ui/button";
+import DateIcon from "../icons/date-icon";
+import AddressIcon from "../icons/address-icon";
+import ArrowRightIcon from "../icons/arrow-right-icon";
 
 const EventItem = (props: dummyEventsType) => {
     const { title, image, date, location, id } = props;
@@ -20,14 +23,19 @@ const EventItem = (props: dummyEventsType) => {
                 <div className={classes.summary}>
                     <h2>{title}</h2>
                     <div className={classes.date}>
+                        <DateIcon />
                         <time>{humanReadableDate}</time>
                     </div>
                     <div className={classes.address}>
+                        <AddressIcon />
                         <address>{formattedAddress}</address>
                     </div>
                 </div>
                 <div className={classes.actions}>
                     <Button link={`/events/${id}`}>Explore Event</Button>
+                    <span className={classes.icon}>
+                        <ArrowRightIcon />
+                    </span>
                 </div>
             </div>
         </li>
