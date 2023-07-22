@@ -16,9 +16,13 @@ const EventItem = (props: dummyEventsType) => {
 
     const formattedAddress = location.replace(", ", "\n");
 
+    console.log(image);
+    
+    
+
     return (
         <li className={classes.item}>
-            <img src={`./${image}`} alt="" />
+            <img src={`/${image}`} alt="" />
             <div className={classes.content}>
                 <div className={classes.summary}>
                     <h2>{title}</h2>
