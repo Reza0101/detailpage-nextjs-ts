@@ -5,6 +5,8 @@ import classes from "./event-list.module.css";
 const EventList = (props: { items: dummyEventsType[] }) => {
     const { items } = props;
 
+    
+
     return (
         <ul className={classes.list}>
             {items.map((event: dummyEventsType) => (
